@@ -1,3 +1,6 @@
+// Release builds are a GUI-subsystem app: no console window, and it survives the launching terminal closing.
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 mod desktop;
 mod render;
 
